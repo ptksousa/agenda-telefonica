@@ -6,14 +6,16 @@ def menu():
     print('[ 2 ] REMOVER CONTATO')
     print('[ 3 ] VER AGENDA')
     print('[ 4 ] SAIR')
-    while True:
-        try:
-            opcao = int(input('ESCOLHA UMA OPÇÃO: '))
-            if opcao in range(1,5):
-                return opcao
-        except:
-            print('Digíte apenas números.')
-        else:
-            print('Somente números de 1 a 4.')
+
+    chave = int(input('Escolha uma opção: '))
+    return chave
 
 
+def cadastrar_contato(lista):
+    print('-='*20)
+    nome = input('Digíte o nome: ').upper()
+    numero = int(input('Digíte o número: '))
+    contato = []
+    contato.append(nome)
+    contato.append(numero)
+    lista.append(contato[:])
