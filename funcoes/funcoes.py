@@ -1,4 +1,5 @@
 def menu():
+    # Apresentação do menu formatado return da opção desejada
     print('-='*20)
     print('MENU'.center(40))
     print('-='*20)
@@ -8,6 +9,7 @@ def menu():
     print('[ 4 ] SAIR')
 
     while True:
+        # Escolha do índice da opção desejada
         try:    
             chave = int(input('Escolha uma opção: '))
             if chave < 5 and chave > 0:
@@ -19,6 +21,7 @@ def menu():
 
 
 def cadastrar_contato(lista):
+    # Input do cadastro com nome e número de telefone do contato 
     print('-='*20)
     nome = input('Digíte o nome: ').upper()
     while True:
@@ -27,7 +30,10 @@ def cadastrar_contato(lista):
             break
         except:
             print('Dígite um número de telefone válido')
+    
+    # Criação da lista que recebe o contato
     contato = []
     contato.append(nome)
     contato.append(numero)
+    # Integração da lista com nome e número dentro de outra lista, que recebe os contatos agrupados
     lista.append(contato[:])
